@@ -7,7 +7,7 @@ import (
 	"github.com/marou9916/birthdayReminder.git/models"
 )
 
-func StoreFriends(amis []models.Friend) {
-	file, _ := json.MarshalIndent(amis, "", " ")
-	_ = os.WriteFile("amis.json", file, 0644)
+func StoreFriends(friends []models.Friend) {
+	file, _ := json.MarshalIndent(friends, "", " ")
+	_ = os.WriteFile("friends.json", file, 0644)
 }

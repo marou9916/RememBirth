@@ -12,22 +12,22 @@ func main() {
 	friends := internal.LoadFriends()
 
 	if len(os.Args) < 2 {
-		fmt.Println("Usage: [ajouter|lister]")
+		fmt.Println("Usage: [add|list]")
 		return
 	}
 
-	commande := os.Args[1]
+	command := os.Args[1]
 
-	switch commande {
-	case "ajouter":
+	switch command {
+	case "add":
 		if len(os.Args) != 5 {
-			fmt.Println("Usage: ajouter [nom] [prenom] [YYYY-MM-DD]")
+			fmt.Println("Usage: add [name] [surname] [YYYY-MM-DD]")
 			return
 		}
 		internal.AddFriend(os.Args[2], os.Args[3], os.Args[4], &friends) // Passer un pointeur
-	case "lister":
+	case "list":
 		internal.ListFriends()
 	default:
-		fmt.Println("Commande inconnue:", commande)
+		fmt.Println("Commande inconnue:", command)
 	}
 }

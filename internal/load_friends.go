@@ -11,14 +11,12 @@ import (
 func LoadFriends() []models.Friend {
 	var friends []models.Friend
 
-	file, err := os.ReadFile("amis.json")
+	file, err := os.ReadFile("friends.json")
 	if err != nil {
-		// Si le fichier n'existe pas, retourner une liste vide
 		fmt.Println("Aucun fichier trouvé, création d'une nouvelle liste.")
 		return friends
 	}
 
-	// Charger les amis depuis le fichier JSON
 	err = json.Unmarshal(file, &friends)
 	if err != nil {
 		fmt.Println("Erreur de chargement des amis:", err)
@@ -27,3 +25,21 @@ func LoadFriends() []models.Friend {
 
 	return friends
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
