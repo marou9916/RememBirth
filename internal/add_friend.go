@@ -1,49 +1,29 @@
-// package internal
-
-// import (
-// 	"fmt"
-// 	"time"
-
-// 	"github.com/marou9916/birthdayReminder.git/models"
-// )
-
-// func AddFriend(name, surname, dateStr string, friends *[]models.Friend) {
-// 	date, err := time.Parse("2006-01-02", dateStr)
-// 	if err != nil {
-// 		fmt.Println("Erreur de format de date. Utilisez YYYY-MM-DD.")
-// 		return
-// 	}
-
-// 	friend := models.Friend{
-// 		Nom:              name,
-// 		Prenom:           surname,
-// 		DateAnniversaire: date,
-// 	}
-
-// 	*friends = append(*friends, friend)
-// 	StoreFriends(*friends)
-
-//		fmt.Println("Ami ajouté avec succès!")
-//	}
 package internal
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/marou9916/birthdayReminder.git/models"
 )
 
-func AddFriend(name, surname, dateStr string, friends *[]models.Friend) {
-	date, _ := time.Parse("2006-01-02", dateStr)
+// Function to add a friend
+func AddFriend(name, surname, dateStr, email string, friends *[]models.Friend) {
+	date, err := time.Parse("2006-01-02", dateStr)
+	if err != nil {
+		fmt.Println("Error in date format. Use YYYY-MM-DD.")
+		return
+	}
 
 	friend := models.Friend{
-		Name: name,
-		Surname: surname,
+		Name:     name,
+		Surname:  surname,
 		Birthday: date,
+		Email:    email, // Add the email address
 	}
 
 	*friends = append(*friends, friend)
+	StoreFriends(*friends) // Store the updated list of friends
 
-	StoreFriends(*friends)
-
+	fmt.Println("Friend added successfully!")
 }

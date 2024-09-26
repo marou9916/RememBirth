@@ -5,39 +5,41 @@ import (
 	"os"
 
 	"github.com/fatih/color"
+	"github.com/marou9916/birthdayReminder.git/models"
 	"github.com/olekukonko/tablewriter"
 )
 
-// Fonction pour styliser les amis en tableau
-func ListFriends() {
-	friends := LoadFriends()
+// Function to list friends in a styled table
+func ListFriends(friends []models.Friend) {
 	if len(friends) == 0 {
-		color.Red("Aucun ami trouvé.")
+		color.Red("No friends found.")
 		return
 	}
 
-	// Créer le tableau
+	// Create the table
 	table := tablewriter.NewWriter(os.Stdout)
-	table.SetHeader([]string{"Name", "Surname", "Birthday"})
+	table.SetHeader([]string{"Name", "Surname", "Birthday", "Email"}) // Added Email header
 
-	// Style des en-têtes (bleu-violet pour le fond, texte coloré)
+	// Header style (blue-violet background, colored text)
 	table.SetHeaderColor(
-		tablewriter.Colors{tablewriter.Bold, tablewriter.BgHiMagentaColor, tablewriter.FgGreenColor},  // Fond bleu-violet avec texte vert pour "Nom"
-		tablewriter.Colors{tablewriter.Bold, tablewriter.BgHiMagentaColor, tablewriter.FgYellowColor}, // Fond bleu-violet avec texte jaune pour "Prénom"
-		tablewriter.Colors{tablewriter.Bold, tablewriter.BgHiMagentaColor, tablewriter.FgCyanColor},   // Fond bleu-violet avec texte cyan pour "Anniversaire"
+		tablewriter.Colors{tablewriter.Bold, tablewriter.BgHiMagentaColor, tablewriter.FgGreenColor},  // Background blue-violet with green text for "Name"
+		tablewriter.Colors{tablewriter.Bold, tablewriter.BgHiMagentaColor, tablewriter.FgYellowColor}, // Background blue-violet with yellow text for "Surname"
+		tablewriter.Colors{tablewriter.Bold, tablewriter.BgHiMagentaColor, tablewriter.FgCyanColor},   // Background blue-violet with cyan text for "Birthday"
+		tablewriter.Colors{tablewriter.Bold, tablewriter.BgHiMagentaColor, tablewriter.FgWhiteColor},  // Background blue-violet with white text for "Email"
 	)
 
-	// Boucle pour ajouter chaque ami au tableau
+	// Loop to add each friend to the table
 	for _, friend := range friends {
 		row := []string{
-			fmt.Sprintf("\033[30;47m%s\033[0m", friend.Name),                          // Texte noir avec fond blanc
-			fmt.Sprintf("\033[30;47m%s\033[0m", friend.Surname),                       // Texte noir avec fond blanc
-			fmt.Sprintf("\033[30;47m%s\033[0m", friend.Birthday.Format("2006-01-02")), // Texte noir avec fond blanc
+			fmt.Sprintf("\033[30;47m%s\033[0m", friend.Name),                          // Black text with white background
+			fmt.Sprintf("\033[30;47m%s\033[0m", friend.Surname),                       // Black text with white background
+			fmt.Sprintf("\033[30;47m%s\033[0m", friend.Birthday.Format("2006-01-02")), // Black text with white background
+			fmt.Sprintf("\033[30;47m%s\033[0m", friend.Email),                         // Black text with white background
 		}
 		table.Append(row)
 	}
 
-	// Style du tableau
+	// Table style
 	table.SetBorder(true)
 	table.SetRowLine(true)
 	table.Render()

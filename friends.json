@@ -2,11 +2,19 @@
  {
   "name": "Oumar",
   "surname": "Ndiaye",
-  "birthday": "1999-03-16T00:00:00Z"
+  "birthday": "1999-03-16T00:00:00Z",
+  "email": "oumar.ndiaye448@gmail.com"
  },
  {
-  "name": "Oubbahi",
-  "surname": "Doreen",
-  "birthday": "1999-03-31T00:00:00Z"
+  "name": "Dubai",
+  "surname": "Nou",
+  "birthday": "2007-03-12T00:00:00Z",
+  "email": "dubai.nou@gmail.com"
+ },
+ {
+  "name": "philippe",
+  "surname": "lecrosnier",
+  "birthday": "1993-10-20T00:00:00Z",
+  "email": "lecro.philippe@icloud.com"
  }
 ]
