@@ -1,11 +1,5 @@
 [
  {
-  "name": "Oumar",
-  "surname": "Ndiaye",
-  "birthday": "1999-03-16T00:00:00Z",
-  "email": "oumar.ndiaye448@gmail.com"
- },
- {
   "name": "Dubai",
   "surname": "Nou",
   "birthday": "2007-03-12T00:00:00Z",
@@ -16,5 +10,11 @@
   "surname": "lecrosnier",
   "birthday": "1993-10-20T00:00:00Z",
   "email": "lecro.philippe@icloud.com"
+ },
+ {
+  "name": "AOUE",
+  "surname": "Phil",
+  "birthday": "2007-09-12T00:00:00Z",
+  "email": "phil.aoue@gmail.com"
  }
 ]

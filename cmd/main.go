@@ -46,6 +46,13 @@ func main() {
 		for _, friend := range upcoming {
 			internal.SendBirthdayReminder(friend) // Send the birthday reminder
 		}
+	
+	case "delete":
+		if len(os.Args) != 3 {
+			fmt.Println("Usage: delete [surname]")
+			return
+		}
+		internal.DeleteFriend(os.Args[2])
 
 	default:
 		fmt.Println("Unknown command:", command)
