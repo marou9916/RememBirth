@@ -2,19 +2,21 @@
  {
   "name": "Dubai",
   "surname": "Nou",
-  "birthday": "2007-03-12T00:00:00Z",
-  "email": "dubai.nou@gmail.com"
+  "birthday": "2007-03-12T00:00:00Z"
  },
  {
   "name": "philippe",
   "surname": "lecrosnier",
-  "birthday": "1993-10-20T00:00:00Z",
-  "email": "lecro.philippe@icloud.com"
+  "birthday": "1993-10-20T00:00:00Z"
  },
  {
   "name": "AOUE",
   "surname": "Phil",
-  "birthday": "2007-09-12T00:00:00Z",
-  "email": "phil.aoue@gmail.com"
+  "birthday": "2007-09-12T00:00:00Z"
+ },
+ {
+  "name": "Ndiaye",
+  "surname": "Oumar",
+  "birthday": "1999-03-16T00:00:00Z"
  }
 ]

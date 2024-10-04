@@ -8,7 +8,7 @@ import (
 )
 
 // Function to add a friend
-func AddFriend(name, surname, dateStr, email string, friends *[]models.Friend) {
+func AddFriend(name, surname, dateStr string, friends *[]models.Friend) {
 	date, err := time.Parse("2006-01-02", dateStr)
 	if err != nil {
 		fmt.Println("Error in date format. Use YYYY-MM-DD.")
@@ -19,7 +19,6 @@ func AddFriend(name, surname, dateStr, email string, friends *[]models.Friend) {
 		Name:     name,
 		Surname:  surname,
 		Birthday: date,
-		Email:    email, // Add the email address
 	}
 
 	*friends = append(*friends, friend)

@@ -25,21 +25,3 @@ func LoadFriends() []models.Friend {
 
 	return friends
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -18,14 +18,13 @@ func ListFriends(friends []models.Friend) {
 
 	// Create the table
 	table := tablewriter.NewWriter(os.Stdout)
-	table.SetHeader([]string{"Name", "Surname", "Birthday", "Email"}) // Added Email header
+	table.SetHeader([]string{"Name", "Surname", "Birthday"}) // Removed Email header
 
 	// Header style (blue-violet background, colored text)
 	table.SetHeaderColor(
 		tablewriter.Colors{tablewriter.Bold, tablewriter.BgHiMagentaColor, tablewriter.FgGreenColor},  // Background blue-violet with green text for "Name"
 		tablewriter.Colors{tablewriter.Bold, tablewriter.BgHiMagentaColor, tablewriter.FgYellowColor}, // Background blue-violet with yellow text for "Surname"
 		tablewriter.Colors{tablewriter.Bold, tablewriter.BgHiMagentaColor, tablewriter.FgCyanColor},   // Background blue-violet with cyan text for "Birthday"
-		tablewriter.Colors{tablewriter.Bold, tablewriter.BgHiMagentaColor, tablewriter.FgWhiteColor},  // Background blue-violet with white text for "Email"
 	)
 
 	// Loop to add each friend to the table
@@ -34,7 +33,6 @@ func ListFriends(friends []models.Friend) {
 			fmt.Sprintf("\033[30;47m%s\033[0m", friend.Name),                          // Black text with white background
 			fmt.Sprintf("\033[30;47m%s\033[0m", friend.Surname),                       // Black text with white background
 			fmt.Sprintf("\033[30;47m%s\033[0m", friend.Birthday.Format("2006-01-02")), // Black text with white background
-			fmt.Sprintf("\033[30;47m%s\033[0m", friend.Email),                         // Black text with white background
 		}
 		table.Append(row)
 	}

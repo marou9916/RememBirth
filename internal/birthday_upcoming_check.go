@@ -6,15 +6,18 @@ import (
 	"github.com/marou9916/birthdayReminder.git/models"
 )
 
-// CheckUpcomingBirthdays retourne une liste d'amis avec un anniversaire à venir
+// CheckUpcomingBirthdays returns a list of friends with a birthday in the next "days" days (e.g., 1 day for tomorrow)
 func CheckUpcomingBirthdays(friends []models.Friend, days int) []models.Friend {
 	var upcoming []models.Friend
 	today := time.Now()
-	limitDate := today.AddDate(0, 0, days) // Ajouter le nombre de jours spécifié
+	limitDate := today.AddDate(0, 0, days) // Add the specified number of days
 
 	for _, friend := range friends {
-		// On compare uniquement le jour et le mois
-		if friend.Birthday.Month() == limitDate.Month() && friend.Birthday.Day() == limitDate.Day() {
+		// Create the friend's birthday for this year
+		birthdayOfMyFriendThisYear := time.Date(today.Year(), friend.Birthday.Month(), friend.Birthday.Day(), 0, 0, 0, 0, time.UTC)
+
+		// Check if the birthday is within the next "days" days
+		if birthdayOfMyFriendThisYear.After(today) && birthdayOfMyFriendThisYear.Before(limitDate) {
 			upcoming = append(upcoming, friend)
 		}
 	}
