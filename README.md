@@ -76,7 +76,7 @@ The project is organized as follows:
 
 ## Usage
 
-    1. Running the Application:
+    1. **Running the Application**:
 
         To run the application, use the following command:
             ```bash
@@ -84,15 +84,15 @@ The project is organized as follows:
 
         This will present you with a command-line interface to interact with the RememBirth tool.
 
-    2. Adding friends:
+    2. **Adding friends**:
 
         You can add friends by following the prompts in the application. Ensure that the friend's birthday is entered in the correct format (e.g., YYYY-MM-DD).
 
-    3. Sending Email Reminders:
+    3. **Sending Email Reminders**:
 
         Set up your SMTP configuration in the code to send email reminders. Make sure you have the necessary permissions for sending emails.
 
-    4. Checking Upcoming Birthdays:
+    4. **Checking Upcoming Birthdays**:
 
         The application will check for upcoming birthdays and notify you via email if you have set up the reminder feature.
 
@@ -100,7 +100,7 @@ The project is organized as follows:
 
 To automate the reminder emails, you can set up a cron job. Here's how to do it:
 
-    1. Create a shell script:
+    1. **Create a shell script**:
 
         Edit the remembirth_cron.sh file to include the following:
 
