@@ -47,10 +47,10 @@ To get started with RememBirth, you'll need to have Go installed on your machine
 
 The RememBirth tool works by managing a list of friends stored in a JSON file (friends.json). You can perform various operations such as adding friends, deleting friends, listing friends, checking for upcoming birthdays, and sending email reminders.
 
-    Adding Friends: You can add a friend's name, surname, and birthday to the friends.json file.
-    Listing Friends: List all friends stored in your friends.json.
-    Checking Upcoming Birthdays: Check for friends whose birthdays are coming up in the next day.
-    Sending Emails: Automated emails will be sent to remind you of upcoming birthdays.
+    **Adding Friends**: You can add a friend's name, surname, and birthday to the friends.json file.
+    **Listing Friends**: List all friends stored in your friends.json.
+    **Checking Upcoming Birthdays**: Check for friends whose birthdays are coming up in the next day.
+    **Sending Emails**: Automated emails will be sent to remind you of upcoming birthdays.
 
 ## Project Structure
 
