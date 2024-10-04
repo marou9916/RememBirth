@@ -55,7 +55,7 @@ The RememBirth tool works by managing a list of friends stored in a JSON file (f
 ## Project Structure
 
 The project is organized as follows:
-
+```
 ├── cmd
 │   └── main.go                   # The main entry point for the application
 ├── friends.json                  # JSON file containing friend data
@@ -73,7 +73,7 @@ The project is organized as follows:
 │   └── friend.go                # Definition of the Friend struct
 ├── README.md                     # Project documentation
 └── remembirth_cron.sh           # Shell script for running the reminder job
-
+```
 ## Usage
 
     1. **Running the Application**:
