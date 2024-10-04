@@ -36,7 +36,7 @@ To get started with RememBirth, you'll need to have Go installed on your machine
 
     1. Clone the repository to your local machine:
     ```bash
-    git clone https://github.com/yourusername/birthdayReminder.git
+    git clone https://github.com/yourusername/RememBirth.git
     cd birthdayReminder
 
     2. Install dependencies:
