@@ -6,9 +6,9 @@ The idea for RememBirth came from a personal struggle: I often found it challeng
 
 ## RememBirth
 
-RememBirth is a command-line tool designed to help you remember and receive birthday reminders for your friends. This project allows you to add friends, check for upcoming birthdays, and automate reminders to yourself via email, ensuring you never miss an important date again. 
+RememBirth is a command-line tool designed to help you remember and receive birthday reminders for your friends. This project allows you to add friends, check for upcoming birthdays, and automate reminders to yourself via email, ensuring you never miss an important date again.
 
-Currently, RememBirth sends email reminders to yourself, allowing you to remember your friends' birthdays. However, I'm considering future enhancements, such as the possibility of allowing RememBirth to send birthday wishes directly to your friends! 🎉✨
+While I could enhance RememBirth to send automated messages directly to my friends, I find that this approach can feel a bit robotic. Sending personalized messages allows me to connect with them more meaningfully and shows that I genuinely care. For now, I prefer crafting my own messages, but it’s an option I might explore in the future! 🎉✨
 
 ## Why a Command-Line Tool?
 
